@@ -9,7 +9,7 @@ import retrofit2.http.GET
  */
 interface BufferooService {
 
-    @GET("team.json")
+    @GET("bufferoos")
     fun getBufferoos(): Flowable<BufferooResponse>
 
     class BufferooResponse {
