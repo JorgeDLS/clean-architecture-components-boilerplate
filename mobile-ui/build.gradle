@@ -81,14 +81,14 @@ dependencies {
     implementation mobileUiDependencies.supportRecyclerView
     implementation mobileUiDependencies.supportDesign
     implementation mobileUiDependencies.timber
+    implementation mobileUiDependencies.roomRxJava
     implementation mobileUiDependencies.rxAndroid
     implementation mobileUiDependencies.glide
     implementation mobileUiDependencies.dagger
     implementation mobileUiDependencies.daggerSupport
 
-    compile presentationDependencies.archRuntime
-    compile presentationDependencies.archExtensions
-    compile "android.arch.persistence.room:rxjava2:1.0.0-alpha9-1"
+    api presentationDependencies.archRuntime
+    api presentationDependencies.archExtensions
     kapt presentationDependencies.archCompiler
 
     testImplementation mobileUiTestDependencies.kotlinJUnit

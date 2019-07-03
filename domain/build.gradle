@@ -15,6 +15,7 @@ dependencies {
 
     implementation domainDependencies.javaxAnnotation
     implementation domainDependencies.javaxInject
+    api domainDependencies.rxJava
     implementation domainDependencies.rxKotlin
     implementation domainDependencies.kotlin
 
