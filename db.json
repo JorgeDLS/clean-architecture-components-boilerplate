@@ -1,70 +1,72 @@
 {
-  "bufferoos": [
-    {
-      "id": 1,
-      "name": "John Doe",
-      "title": "CDO",
-      "avatar": "https://randomuser.me/api/portraits/men/7.jpg"
-    },
-    {
-      "id": 42,
-      "name": "Mary Phillip",
-      "title": "Head of MKT",
-      "avatar": "https://randomuser.me/api/portraits/women/42.jpg"
-    },
-    {
-      "id": 22,
-      "name": "Francis Howard",
-      "title": "CTO",
-      "avatar": "https://randomuser.me/api/portraits/men/22.jpg"
-    },
-    {
-      "id": 75,
-      "name": "Melissa Williams",
-      "title": "CEO",
-      "avatar": "https://randomuser.me/api/portraits/women/75.jpg"
-    },
-    {
-      "id": 456,
-      "name": "Ricky Wan",
-      "title": "Dev",
-      "avatar": "https://randomuser.me/api/portraits/men/465.jpg"
-    },
-    {
-      "id": 32,
-      "name": "Anna Thomas",
-      "title": "COO",
-      "avatar": "https://randomuser.me/api/portraits/women/32.jpg"
-    },
-    {
-      "id": 33,
-      "name": "Viktor Kasparov",
-      "title": "Customer Specialist",
-      "avatar": "https://randomuser.me/api/portraits/men/33.jpg"
-    },
-    {
-      "id": 11,
-      "name": "Julia Serrano",
-      "title": "Data Scientist",
-      "avatar": "https://randomuser.me/api/portraits/women/11.jpg"
-    },
-    {
-      "id": 5,
-      "name": "Laura Wolf",
-      "title": "Dev",
-      "avatar": "https://randomuser.me/api/portraits/women/5.jpg"
-    },
-    {
-      "id": 98,
-      "name": "Harrison Jones",
-      "title": "Head of HR",
-      "avatar": "https://randomuser.me/api/portraits/men/7.jpg"
-    },
-    {
-      "id": 14,
-      "name": "Paola Andolini",
-      "title": "CDO",
-      "avatar": "https://randomuser.me/api/portraits/women/14.jpg"
-    }
-  ]
+  "bufferoos": {
+    "team": [
+      {
+        "id": 1,
+        "name": "John Doe",
+        "title": "CDO",
+        "avatar": "https://randomuser.me/api/portraits/men/7.jpg"
+      },
+      {
+        "id": 42,
+        "name": "Mary Phillip",
+        "title": "Head of MKT",
+        "avatar": "https://randomuser.me/api/portraits/women/42.jpg"
+      },
+      {
+        "id": 22,
+        "name": "Francis Howard",
+        "title": "CTO",
+        "avatar": "https://randomuser.me/api/portraits/men/22.jpg"
+      },
+      {
+        "id": 75,
+        "name": "Melissa Williams",
+        "title": "CEO",
+        "avatar": "https://randomuser.me/api/portraits/women/75.jpg"
+      },
+      {
+        "id": 456,
+        "name": "Ricky Wan",
+        "title": "Dev",
+        "avatar": "https://randomuser.me/api/portraits/men/465.jpg"
+      },
+      {
+        "id": 32,
+        "name": "Anna Thomas",
+        "title": "COO",
+        "avatar": "https://randomuser.me/api/portraits/women/32.jpg"
+      },
+      {
+        "id": 33,
+        "name": "Viktor Kasparov",
+        "title": "Customer Specialist",
+        "avatar": "https://randomuser.me/api/portraits/men/33.jpg"
+      },
+      {
+        "id": 11,
+        "name": "Julia Serrano",
+        "title": "Data Scientist",
+        "avatar": "https://randomuser.me/api/portraits/women/11.jpg"
+      },
+      {
+        "id": 5,
+        "name": "Laura Wolf",
+        "title": "Dev",
+        "avatar": "https://randomuser.me/api/portraits/women/5.jpg"
+      },
+      {
+        "id": 98,
+        "name": "Harrison Jones",
+        "title": "Head of HR",
+        "avatar": "https://randomuser.me/api/portraits/men/7.jpg"
+      },
+      {
+        "id": 14,
+        "name": "Paola Andolini",
+        "title": "CDO",
+        "avatar": "https://randomuser.me/api/portraits/women/14.jpg"
+      }
+    ]
+  }
 }
