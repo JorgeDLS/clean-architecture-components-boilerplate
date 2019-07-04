@@ -52,7 +52,7 @@ The architecture of the project follows the principles of Clean Architecture. He
 
 ![architecture](https://github.com/bufferapp/clean-architecture-components-boilerplate/blob/master/art/architecture.png?raw=true)
 
-The sample app when run will show you a simple list of all the Bufferoos (Buffer team members!).
+The sample app when run will show you a simple list of all the (Fake) Bufferoos (Buffer team members!).
 <p align="center">
 <img src="https://github.com/bufferapp/android-clean-architecture-boilerplate/blob/master/art/device_screenshot.png" alt="Drawing" style="width: 10px;"/>
 </p>

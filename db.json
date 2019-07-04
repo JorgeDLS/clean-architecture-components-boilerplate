@@ -4,7 +4,7 @@
       {
         "id": 1,
         "name": "John Doe",
-        "title": "CDO",
+        "title": "Intern",
         "avatar": "https://randomuser.me/api/portraits/men/7.jpg"
       },
       {
@@ -26,10 +26,10 @@
         "avatar": "https://randomuser.me/api/portraits/women/75.jpg"
       },
       {
-        "id": 456,
+        "id": 45,
         "name": "Ricky Wan",
         "title": "Dev",
-        "avatar": "https://randomuser.me/api/portraits/men/465.jpg"
+        "avatar": "https://randomuser.me/api/portraits/men/45.jpg"
       },
       {
         "id": 32,
@@ -64,7 +64,7 @@
       {
         "id": 14,
         "name": "Paola Andolini",
-        "title": "CDO",
+        "title": "CFO",
         "avatar": "https://randomuser.me/api/portraits/women/14.jpg"
       }
     ]
