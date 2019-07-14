@@ -27,6 +27,11 @@ interface BufferooCache {
     fun getBufferoos(): Flowable<List<BufferooEntity>>
 
     /**
+     * Retrieve a Bufferoo by ID, from the cache.
+     */
+    fun getBufferooByID(id: Long): Flowable<BufferooEntity>
+
+    /**
      * Check whether there is a list of Bufferoos stored in the cache.
      *
      * @return true if the list is cached, otherwise false

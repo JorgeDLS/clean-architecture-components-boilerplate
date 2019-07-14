@@ -13,6 +13,9 @@ abstract class CachedBufferooDao {
     @Query(BufferooConstants.QUERY_BUFFEROOS)
     abstract fun getBufferoos(): List<CachedBufferoo>
 
+    @Query(BufferooConstants.GET_BUFFEROO_BY_ID + ":id")
+    abstract fun getBufferooByID(id: Long): CachedBufferoo
+
     @Query(BufferooConstants.DELETE_ALL_BUFFEROOS)
     abstract fun clearBufferoos()
 

@@ -17,4 +17,6 @@ interface BufferooRepository {
 
     fun getBufferoos(): Flowable<List<Bufferoo>>
 
+    fun getBufferooByID(id: Long): Flowable<Bufferoo>
+
 }

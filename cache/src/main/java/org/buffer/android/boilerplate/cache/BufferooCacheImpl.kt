@@ -64,6 +64,15 @@ class BufferooCacheImpl @Inject constructor(val bufferoosDatabase: BufferoosData
     }
 
     /**
+     * Retrieve a list of [BufferooEntity] instances from the database.
+     */
+    override fun getBufferooByID(id: Long): Flowable<BufferooEntity> {
+        return Flowable.defer {
+            Flowable.just(bufferoosDatabase.cachedBufferooDao().getBufferooByID(id))
+        }.map { entityMapper.mapFromCached(it) }
+    }
+
+    /**
      * Check whether there are instances of [CachedBufferoo] stored in the cache.
      */
     override fun isCached(): Single<Boolean> {

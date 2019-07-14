@@ -7,6 +7,7 @@ import org.buffer.android.boilerplate.data.model.BufferooEntity
 import org.buffer.android.boilerplate.data.source.BufferooDataStoreFactory
 import org.buffer.android.boilerplate.domain.model.Bufferoo
 import org.buffer.android.boilerplate.domain.repository.BufferooRepository
+import org.intellij.lang.annotations.Flow
 import javax.inject.Inject
 
 /**
@@ -40,4 +41,13 @@ class BufferooDataRepository @Inject constructor(private val factory: BufferooDa
                 }
     }
 
+    override fun getBufferooByID(id: Long): Flowable<Bufferoo> {
+        return factory.retrieveCacheDataStore().isCached()
+                .flatMapPublisher {
+                    factory.retrieveDataStore(it).getBufferooByID(id)
+                }
+                .flatMap {
+                    Flowable.just(bufferooMapper.mapFromEntity(it))
+                }
+    }
 }

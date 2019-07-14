@@ -1,4 +1,4 @@
-package org.buffer.android.boilerplate.domain.interactor.browse
+package org.buffer.android.boilerplate.domain.interactor.detail
 
 import io.reactivex.Flowable
 import org.buffer.android.boilerplate.domain.executor.PostExecutionThread
@@ -9,15 +9,15 @@ import org.buffer.android.boilerplate.domain.repository.BufferooRepository
 import javax.inject.Inject
 
 /**
- * Use case used for retrieving a [List] of [Bufferoo] instances from the [BufferooRepository]
+ * Use case used for retrieving a [Bufferoo] instance by ID from the [BufferooRepository]
  */
-open class GetBufferoos @Inject constructor(val bufferooRepository: BufferooRepository,
+open class GetBufferooByID @Inject constructor(val bufferooRepository: BufferooRepository,
                                             threadExecutor: ThreadExecutor,
                                             postExecutionThread: PostExecutionThread):
-        FlowableUseCase<List<Bufferoo>, Void?>(threadExecutor, postExecutionThread) {
+        FlowableUseCase<Bufferoo, Long?>(threadExecutor, postExecutionThread) {
 
-    public override fun buildUseCaseObservable(params: Void?): Flowable<List<Bufferoo>> {
-        return bufferooRepository.getBufferoos()
+    public override fun buildUseCaseObservable(params: Long?): Flowable<Bufferoo> {
+        return bufferooRepository.getBufferooByID(params!!)
     }
 
 }

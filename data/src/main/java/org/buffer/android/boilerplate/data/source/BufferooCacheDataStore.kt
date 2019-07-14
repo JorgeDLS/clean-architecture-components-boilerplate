@@ -40,6 +40,13 @@ open class BufferooCacheDataStore @Inject constructor(private val bufferooCache:
     }
 
     /**
+     * Retrieve a [BufferooEntity] instance from the cache filtered by ID
+     */
+    override fun getBufferooByID(id: Long): Flowable<BufferooEntity> {
+        return bufferooCache.getBufferooByID(id)
+    }
+
+    /**
      * Retrieve a list of [BufferooEntity] instance from the cache
      */
     override fun isCached(): Single<Boolean> {

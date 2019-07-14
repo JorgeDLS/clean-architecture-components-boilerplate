@@ -30,6 +30,13 @@ open class BufferooRemoteDataStore @Inject constructor(private val bufferooRemot
         return bufferooRemote.getBufferoos()
     }
 
+    /**
+     * Retrieve a [BufferooEntity] instance from the API filtered by ID
+     */
+    override fun getBufferooByID(id: Long): Flowable<BufferooEntity> {
+         return bufferooRemote.getBufferooByID(id)
+    }
+
     override fun isCached(): Single<Boolean> {
         throw UnsupportedOperationException()
     }
