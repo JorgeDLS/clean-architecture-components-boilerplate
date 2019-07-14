@@ -6,6 +6,7 @@ import dagger.android.ContributesAndroidInjector
 import org.buffer.android.boilerplate.domain.executor.PostExecutionThread
 import org.buffer.android.boilerplate.ui.UiThread
 import org.buffer.android.boilerplate.ui.browse.BrowseActivity
+import org.buffer.android.boilerplate.ui.detail.DetailActivity
 
 /**
  * Module that provides all dependencies from the mobile-ui package/layer and injects all activities.
@@ -18,4 +19,7 @@ abstract class UiModule {
 
     @ContributesAndroidInjector
     abstract fun contributeMainActivity(): BrowseActivity
+
+    @ContributesAndroidInjector
+    abstract fun contributeDetailActivity(): DetailActivity
 }

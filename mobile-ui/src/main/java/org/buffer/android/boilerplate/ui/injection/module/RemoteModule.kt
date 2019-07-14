@@ -29,5 +29,5 @@ abstract class RemoteModule {
     }
 
     @Binds
-    abstract fun bindBufferooRemote(bufferooRemoteImpl: BufferooRemoteImpl): BufferooRemote
+    abstract fun bindBufferooRemote(bufferooRemoteImpl: BufferooRemoteImpl):  BufferooRemote
 }

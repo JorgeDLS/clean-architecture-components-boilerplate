@@ -8,6 +8,7 @@ import dagger.Module
 import dagger.multibindings.IntoMap
 import org.buffer.android.boilerplate.presentation.ViewModelFactory
 import org.buffer.android.boilerplate.presentation.browse.BrowseBufferoosViewModel
+import org.buffer.android.boilerplate.presentation.detail.BufferooDetailViewModel
 import kotlin.reflect.KClass
 
 /**
@@ -28,6 +29,11 @@ abstract class PresentationModule {
     @IntoMap
     @ViewModelKey(BrowseBufferoosViewModel::class)
     abstract fun bindBrowseBufferoosViewModel(viewModel: BrowseBufferoosViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(BufferooDetailViewModel::class)
+    abstract fun bindBufferoosDetailViewModel(viewModel: BufferooDetailViewModel): ViewModel
 
     @Binds
     abstract fun bindViewModelFactory(factory: ViewModelFactory): ViewModelProvider.Factory
