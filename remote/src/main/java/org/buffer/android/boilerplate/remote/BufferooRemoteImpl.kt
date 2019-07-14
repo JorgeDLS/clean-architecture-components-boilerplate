@@ -1,7 +1,6 @@
 package org.buffer.android.boilerplate.remote
 
 import io.reactivex.Flowable
-import io.reactivex.Observable
 import org.buffer.android.boilerplate.data.model.BufferooEntity
 import org.buffer.android.boilerplate.data.repository.BufferooRemote
 import org.buffer.android.boilerplate.remote.mapper.BufferooEntityMapper
@@ -13,7 +12,7 @@ import javax.inject.Inject
  * operations in which data store implementation layers can carry out.
  */
 class BufferooRemoteImpl @Inject constructor(private val bufferooService: BufferooService,
-                                             private val entityMapper: BufferooEntityMapper):
+                                             private val entityMapper: BufferooEntityMapper) :
         BufferooRemote {
 
     /**
@@ -26,6 +25,17 @@ class BufferooRemoteImpl @Inject constructor(private val bufferooService: Buffer
                     val entities = mutableListOf<BufferooEntity>()
                     it.forEach { entities.add(entityMapper.mapFromRemote(it)) }
                     entities
+                }
+    }
+
+    /**
+     * Retrieve a [BufferooEntity] instance from the [BufferooService] filtered by ID.
+     */
+    override fun getBufferooByID(id: Long): Flowable<BufferooEntity> {
+        return bufferooService.getBufferoos()
+                .map { it.team }
+                .map {
+                    it.asSequence().filter { it.id == id }.map { entityMapper.mapFromRemote(it) }.first()
                 }
     }
 

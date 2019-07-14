@@ -14,7 +14,7 @@ open class BufferooMapper @Inject constructor(): Mapper<BufferooViewModel, Buffe
      * Map a [BufferooView] instance to a [BufferooViewModel] instance
      */
     override fun mapToViewModel(type: BufferooView): BufferooViewModel {
-        return BufferooViewModel(type.name, type.title, type.avatar)
+        return BufferooViewModel(type.id, type.name, type.title, type.avatar)
     }
 
 }

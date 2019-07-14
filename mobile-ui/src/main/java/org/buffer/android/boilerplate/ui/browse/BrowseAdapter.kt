@@ -9,10 +9,11 @@ import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import org.buffer.android.boilerplate.ui.R
+import org.buffer.android.boilerplate.ui.mapper.BufferooMapper
 import org.buffer.android.boilerplate.ui.model.BufferooViewModel
 import javax.inject.Inject
 
-class BrowseAdapter @Inject constructor(): RecyclerView.Adapter<BrowseAdapter.ViewHolder>() {
+class BrowseAdapter(val clickListener: (Long) -> Unit): RecyclerView.Adapter<BrowseAdapter.ViewHolder>() {
 
     var bufferoos: List<BufferooViewModel> = arrayListOf()
 
@@ -25,6 +26,7 @@ class BrowseAdapter @Inject constructor(): RecyclerView.Adapter<BrowseAdapter.Vi
                 .load(bufferoo.avatar)
                 .apply(RequestOptions.circleCropTransform())
                 .into(holder.avatarImage)
+        holder.itemView.setOnClickListener { clickListener(bufferoo.id) }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

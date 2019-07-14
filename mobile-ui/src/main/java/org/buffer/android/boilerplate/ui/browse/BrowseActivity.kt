@@ -2,6 +2,7 @@ package org.buffer.android.boilerplate.ui.browse
 
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
@@ -13,6 +14,7 @@ import org.buffer.android.boilerplate.presentation.browse.BrowseBufferoosViewMod
 import org.buffer.android.boilerplate.presentation.data.ResourceState
 import org.buffer.android.boilerplate.presentation.model.BufferooView
 import org.buffer.android.boilerplate.ui.R
+import org.buffer.android.boilerplate.ui.detail.DetailActivity
 import org.buffer.android.boilerplate.ui.mapper.BufferooMapper
 import org.buffer.android.boilerplate.ui.widget.empty.EmptyListener
 import org.buffer.android.boilerplate.ui.widget.error.ErrorListener
@@ -20,10 +22,10 @@ import javax.inject.Inject
 
 class BrowseActivity : AppCompatActivity() {
 
-    @Inject lateinit var browseAdapter: BrowseAdapter
     @Inject lateinit var mapper: BufferooMapper
     @Inject lateinit var viewModelFactory: ViewModelFactory
     private lateinit var browseBufferoosViewModel: BrowseBufferoosViewModel
+    private val browseAdapter: BrowseAdapter = BrowseAdapter { id: Long -> itemClicked(id) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,6 +44,12 @@ class BrowseActivity : AppCompatActivity() {
         browseBufferoosViewModel.getBufferoos().observe(this, Observer {
             if (it != null) this.handleDataState(it.status, it.data, it.message)
         })
+    }
+
+    private fun itemClicked(id: Long) {
+        val showDetailActivityIntent = Intent(this, DetailActivity::class.java)
+        showDetailActivityIntent.putExtra(DetailActivity.EXTRA_ID, id)
+        startActivity(showDetailActivityIntent)
     }
 
     private fun setupBrowseRecycler() {
