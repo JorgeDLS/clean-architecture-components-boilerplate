@@ -8,7 +8,7 @@ import org.buffer.android.boilerplate.cache.dao.CachedBufferooDao
 import org.buffer.android.boilerplate.cache.model.CachedBufferoo
 import javax.inject.Inject
 
-@Database(entities = arrayOf(CachedBufferoo::class), version = 1)
+@Database(entities = arrayOf(CachedBufferoo::class), version = 1, exportSchema = false)
 abstract class BufferoosDatabase @Inject constructor() : RoomDatabase() {
 
     abstract fun cachedBufferooDao(): CachedBufferooDao
